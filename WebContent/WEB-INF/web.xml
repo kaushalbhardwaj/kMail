@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>kMail</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>loginservlet</servlet-name>
+  	<servlet-class>LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>inboxservlet</servlet-name>
+  	<servlet-class>InboxServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>viewservlet</servlet-name>
+  	<servlet-class>ViewMailServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>sendservlet</servlet-name>
+  	<servlet-class>SendReplyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>loginservlet</servlet-name>
+  	<url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>inboxservlet</servlet-name>
+  	<url-pattern>/inbox</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>viewservlet</servlet-name>
+  	<url-pattern>/viewMail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>sendservlet</servlet-name>
+  	<url-pattern>/sendReply</url-pattern>
+  </servlet-mapping>
+</web-app>
